@@ -16,11 +16,13 @@ import java.util.Arrays;
 @RunWith(Parameterized.class)
 @Parameterized.UseParametersRunnerFactory(VertxUnitRunnerWithParametersFactory.class)
 public class JsDeployProblemTest {
+
     private static final Logger logger = LoggerFactory.getLogger(JsDeployProblemTest.class);
-    private final String deployString;
 
     @Rule
     public RunTestOnContext rule = new RunTestOnContext();
+
+    private final String deployString;
 
     public JsDeployProblemTest(String deployString) {
         this.deployString = deployString;
